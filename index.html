@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>张微 · 个人作品集 | Wei Zhang Portfolio</title>
+<meta name="description" content="张微的个人作品集 — 广告脚本策划 / 游戏美术 / UI设计 / 摄影 / 平面设计">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Noto+Sans+SC:wght@400;500;700;900&family=ZCOOL+KuaiLe&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#FFF6EC;
+  --bg2:#FFEFE0;
+  --ink:#33293F;
+  --ink-soft:#6B5E7B;
+  --coral:#FF7A59;
+  --pink:#F26D9C;
+  --teal:#2FB8AC;
+  --yellow:#FFC53D;
+  --purple:#8E7CE0;
+  --cream:#FFFDF8;
+  --shadow:0 10px 30px rgba(51,41,63,.10);
+  --radius:28px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;
+  background:var(--bg);color:var(--ink);line-height:1.75;overflow-x:hidden;
+}
+::selection{background:var(--yellow);color:var(--ink)}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+
+/* ---------- Nav ---------- */
+nav{
+  position:fixed;top:16px;left:50%;transform:translateX(-50%);z-index:100;
+  display:flex;align-items:center;gap:4px;
+  background:rgba(255,253,248,.88);backdrop-filter:blur(12px);
+  border:2px solid var(--ink);border-radius:999px;padding:8px 14px;
+  box-shadow:4px 4px 0 rgba(51,41,63,.9);max-width:94vw;
+}
+nav .logo{font-family:"Baloo 2","ZCOOL KuaiLe",cursive;font-weight:800;font-size:1.05rem;padding:0 10px;color:var(--coral);white-space:nowrap}
+nav a.item{font-size:.9rem;font-weight:500;padding:6px 14px;border-radius:999px;white-space:nowrap;transition:.2s}
+nav a.item:hover{background:var(--ink);color:var(--cream)}
+@media(max-width:760px){
+  nav{top:10px;padding:6px 10px;gap:0}
+  nav .logo{padding:0 6px;font-size:.95rem}
+  nav a.item{padding:5px 8px;font-size:.78rem}
+}
+
+/* ---------- Hero ---------- */
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;padding:140px 6vw 80px;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center;max-width:1200px;margin:0 auto;width:100%}
+.hero-tag{display:inline-flex;align-items:center;gap:8px;background:var(--cream);border:2px solid var(--ink);border-radius:999px;padding:6px 18px;font-weight:700;font-size:.9rem;box-shadow:3px 3px 0 rgba(51,41,63,.9);transform:rotate(-2deg);margin-bottom:26px}
+.hero-tag .dot{width:10px;height:10px;border-radius:50%;background:var(--teal);animation:blink 1.6s infinite}
+@keyframes blink{50%{opacity:.3}}
+h1.name{font-family:"ZCOOL KuaiLe","Baloo 2",cursive;font-size:clamp(3.2rem,9vw,6.2rem);line-height:1.1;letter-spacing:.04em}
+h1.name .en{display:block;font-family:"Baloo 2",sans-serif;font-size:clamp(1.1rem,2.6vw,1.6rem);letter-spacing:.35em;color:var(--pink);margin-top:8px}
+.hero-sub{margin:22px 0 30px;font-size:1.08rem;color:var(--ink-soft);max-width:34em}
+.hero-sub b{color:var(--ink)}
+.hero-cta{display:flex;gap:16px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:8px;font-weight:700;border-radius:999px;padding:13px 30px;border:2px solid var(--ink);box-shadow:4px 4px 0 rgba(51,41,63,.9);transition:.15s;cursor:pointer;font-size:1rem}
+.btn.primary{background:var(--coral);color:#fff}
+.btn.ghost{background:var(--cream)}
+.btn:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 rgba(51,41,63,.9)}
+.btn:active{transform:translate(2px,2px);box-shadow:1px 1px 0 rgba(51,41,63,.9)}
+
+/* hero art card */
+.hero-art{position:relative;display:flex;justify-content:center}
+.hero-card{
+  width:min(420px,100%);background:#17141C;border-radius:32px;border:2px solid var(--ink);
+  box-shadow:8px 8px 0 rgba(51,41,63,.9);padding:22px;transform:rotate(2.5deg);
+  transition:transform .3s;position:relative;
+}
+.hero-card:hover{transform:rotate(0deg) scale(1.02)}
+.hero-card img{border-radius:20px;aspect-ratio:16/9;object-fit:cover;width:100%;background:#fff}
+.hero-card .cap{color:#F5EDE2;text-align:center;padding-top:14px;font-size:.9rem;letter-spacing:.1em}
+.hero-card .badge{
+  position:absolute;top:-18px;right:-14px;background:var(--yellow);border:2px solid var(--ink);
+  border-radius:999px;padding:8px 16px;font-weight:900;transform:rotate(8deg);box-shadow:3px 3px 0 rgba(51,41,63,.9);font-size:.85rem;
+}
+.sticker{position:absolute;border-radius:22px;border:2px solid var(--ink);box-shadow:4px 4px 0 rgba(51,41,63,.9);overflow:hidden;background:#fff}
+.sticker img{width:100%;height:100%;object-fit:cover}
+.sticker.s1{width:130px;height:96px;bottom:-26px;left:-30px;transform:rotate(-7deg);animation:float1 5s ease-in-out infinite}
+.sticker.s2{width:96px;height:120px;top:-30px;left:-46px;transform:rotate(6deg);background:#17141C;animation:float2 6s ease-in-out infinite}
+@keyframes float1{50%{transform:rotate(-7deg) translateY(-10px)}}
+@keyframes float2{50%{transform:rotate(6deg) translateY(-8px)}}
+
+/* blobs */
+.blob{position:absolute;border-radius:50%;filter:blur(0);opacity:.55;pointer-events:none}
+.blob.b1{width:340px;height:340px;background:var(--yellow);top:-90px;right:-70px;animation:puff 9s ease-in-out infinite}
+.blob.b2{width:260px;height:260px;background:#FFD9E6;bottom:6%;left:-90px;animation:puff 11s ease-in-out infinite reverse}
+.blob.b3{width:120px;height:120px;background:#C8F1EC;top:22%;left:12%;animation:puff 7s ease-in-out infinite}
+@keyframes puff{50%{border-radius:44% 56% 60% 40% / 50% 42% 58% 50%;transform:rotate(8deg)}}
+
+/* ---------- Marquee ---------- */
+.marquee{background:var(--ink);color:var(--cream);overflow:hidden;padding:16px 0;transform:rotate(-1.2deg);border-top:2px solid var(--ink);border-bottom:2px solid var(--ink);margin:10px 0 0}
+.marquee-track{display:flex;gap:0;white-space:nowrap;animation:scroll 22s linear infinite;width:max-content}
+.marquee span{font-family:"Baloo 2","ZCOOL KuaiLe",cursive;font-size:1.15rem;letter-spacing:.15em;padding:0 18px}
+.marquee .hl{color:var(--yellow)}
+@keyframes scroll{to{transform:translateX(-50%)}}
+
+/* ---------- Section base ---------- */
+section{padding:96px 6vw;position:relative}
+.wrap{max-width:1160px;margin:0 auto}
+.sec-head{text-align:center;margin-bottom:56px}
+.sec-head .kicker{font-family:"Baloo 2",sans-serif;font-weight:700;letter-spacing:.35em;font-size:.8rem;color:var(--coral);text-transform:uppercase}
+.sec-head h2{font-family:"ZCOOL KuaiLe","Baloo 2",cursive;font-size:clamp(2rem,5vw,3rem);margin-top:6px}
+.sec-head p{color:var(--ink-soft);margin-top:10px}
+.underline{position:relative;display:inline-block;z-index:0}
+.underline::after{content:"";position:absolute;left:0;right:0;bottom:6px;height:14px;background:var(--yellow);z-index:-1;border-radius:6px;transform:rotate(-1deg)}
+
+/* reveal — 渐进增强：仅当 JS 可用时才先隐藏再显现，避免脚本被拦截时页面空白 */
+.js .reveal{opacity:0;transform:translateY(34px);transition:opacity .7s ease,transform .7s cubic-bezier(.22,.9,.35,1)}
+.js .reveal.in{opacity:1;transform:none}
+.reveal{transition:opacity .7s ease,transform .7s cubic-bezier(.22,.9,.35,1)}
+
+/* ---------- About ---------- */
+.about-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:36px;align-items:start}
+.about-card{background:var(--cream);border:2px solid var(--ink);border-radius:var(--radius);padding:36px;box-shadow:var(--shadow)}
+.about-card h3{font-family:"ZCOOL KuaiLe",cursive;font-size:1.5rem;margin-bottom:14px}
+.about-card p{color:var(--ink-soft);margin-bottom:12px}
+.about-card p b{color:var(--ink)}
+.info-chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.chip{border:2px solid var(--ink);border-radius:999px;padding:6px 16px;font-size:.88rem;font-weight:600;background:var(--bg2)}
+.chip:nth-child(odd){background:#E4F7F4}
+.chip:nth-child(3n){background:#FFE9F1}
+.adv-grid{display:grid;gap:18px}
+.adv{display:flex;gap:16px;background:var(--cream);border:2px solid var(--ink);border-radius:22px;padding:22px;box-shadow:var(--shadow);transition:.2s}
+.adv:hover{transform:translateY(-4px) rotate(-.5deg)}
+.adv .ico{flex:none;width:52px;height:52px;border-radius:16px;display:grid;place-items:center;font-size:1.5rem;border:2px solid var(--ink)}
+.adv:nth-child(1) .ico{background:var(--yellow)}
+.adv:nth-child(2) .ico{background:#FFD9E6}
+.adv:nth-child(3) .ico{background:#C8F1EC}
+.adv h4{font-size:1.05rem;margin-bottom:4px}
+.adv p{font-size:.9rem;color:var(--ink-soft)}
+
+/* ---------- Skills ---------- */
+.skills-band{background:var(--bg2);border-top:2px solid var(--ink);border-bottom:2px solid var(--ink)}
+.skill-cols{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.skill-box{background:var(--cream);border:2px solid var(--ink);border-radius:var(--radius);padding:30px;box-shadow:var(--shadow);transition:.2s}
+.skill-box:hover{transform:translateY(-6px)}
+.skill-box .ico{width:56px;height:56px;border-radius:18px;display:grid;place-items:center;font-size:1.6rem;border:2px solid var(--ink);margin-bottom:16px}
+.skill-box:nth-child(1) .ico{background:var(--pink);color:#fff}
+.skill-box:nth-child(2) .ico{background:var(--teal);color:#fff}
+.skill-box:nth-child(3) .ico{background:var(--purple);color:#fff}
+.skill-box h4{font-size:1.15rem;margin-bottom:14px}
+.tags{display:flex;flex-wrap:wrap;gap:8px}
+.tags span{background:var(--bg2);border:1.5px solid var(--ink);border-radius:999px;padding:4px 13px;font-size:.85rem;font-weight:600}
+.skill-note{text-align:center;margin-top:26px;color:var(--ink-soft);font-size:.92rem}
+
+/* ---------- Timeline ---------- */
+.timeline{position:relative;max-width:760px;margin:0 auto;padding-left:34px}
+.timeline::before{content:"";position:absolute;left:9px;top:6px;bottom:6px;width:4px;border-radius:4px;background:var(--ink)}
+.tl-item{position:relative;margin-bottom:34px;background:var(--cream);border:2px solid var(--ink);border-radius:22px;padding:24px 28px;box-shadow:var(--shadow)}
+.tl-item::before{content:"";position:absolute;left:-33px;top:28px;width:18px;height:18px;border-radius:50%;background:var(--coral);border:3px solid var(--ink)}
+.tl-item:nth-child(2)::before{background:var(--teal)}
+.tl-item:nth-child(3)::before{background:var(--pink)}
+.tl-item .time{font-family:"Baloo 2",sans-serif;font-weight:700;color:var(--coral);font-size:.9rem;letter-spacing:.08em}
+.tl-item h4{font-size:1.15rem;margin:2px 0 6px}
+.tl-item p{color:var(--ink-soft);font-size:.94rem}
+
+/* ---------- Works ---------- */
+.work{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;margin-bottom:110px}
+.work:last-child{margin-bottom:0}
+.work.flip .media{order:2}
+.work .num{font-family:"Baloo 2",sans-serif;font-weight:800;font-size:4.4rem;line-height:1;color:transparent;-webkit-text-stroke:2px var(--ink);opacity:.5}
+.work h3{font-family:"ZCOOL KuaiLe","Baloo 2",cursive;font-size:clamp(1.6rem,3.4vw,2.3rem);margin:8px 0 4px}
+.work .en{font-family:"Baloo 2",sans-serif;letter-spacing:.2em;font-size:.78rem;color:var(--coral);text-transform:uppercase;font-weight:700}
+.work .desc{color:var(--ink-soft);margin:16px 0 20px}
+.work .desc b{color:var(--ink)}
+.work .pill-row{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}
+.pill{background:var(--cream);border:2px solid var(--ink);border-radius:999px;padding:5px 14px;font-size:.82rem;font-weight:700}
+.pill.c1{background:#FFE9F1}.pill.c2{background:#E4F7F4}.pill.c3{background:#FFF3D6}.pill.c4{background:#EAE4FA}
+.link-btn{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:.92rem;border-bottom:2px dashed var(--coral);padding-bottom:2px;transition:.2s}
+.link-btn:hover{color:var(--coral);gap:12px}
+.media{position:relative}
+.media .main-shot{border-radius:var(--radius);border:2px solid var(--ink);box-shadow:8px 8px 0 rgba(51,41,63,.85);width:100%;object-fit:cover}
+.media .float-shot{position:absolute;width:38%;border-radius:18px;border:2px solid var(--ink);box-shadow:5px 5px 0 rgba(51,41,63,.85);object-fit:cover}
+.media .fs1{bottom:-28px;right:-18px;transform:rotate(4deg)}
+.media .fs2{top:-24px;left:-20px;transform:rotate(-5deg)}
+.script-stack{display:grid;gap:18px}
+.script-card{background:var(--cream);border:2px solid var(--ink);border-radius:22px;box-shadow:6px 6px 0 rgba(51,41,63,.85);padding:22px 24px;transition:.2s}
+.script-card:hover{transform:translateY(-4px)}
+.sc-head{font-weight:900;font-size:1.02rem;margin-bottom:12px;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.sc-tag{background:var(--pink);color:#fff;border:2px solid var(--ink);border-radius:999px;padding:2px 12px;font-size:.78rem}
+.sc-tag.alt{background:var(--teal)}
+.sc-row{display:flex;gap:12px;padding:8px 0;border-top:1.5px dashed rgba(51,41,63,.25);font-size:.88rem;color:var(--ink-soft)}
+.sc-t{flex:none;font-family:"Baloo 2",sans-serif;font-weight:700;color:var(--coral);min-width:64px}
+.work.full{grid-template-columns:1fr;gap:32px;margin-bottom:80px}
+.script-table-card{background:var(--cream);border:2px solid var(--ink);border-radius:22px;box-shadow:6px 6px 0 rgba(51,41,63,.85);padding:22px 24px}
+.st-head{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:14px}
+.st-head b{font-size:1.02rem}
+.st-scroll{overflow-x:auto;border:1.5px solid rgba(51,41,63,.3);border-radius:14px}
+.sb-table{border-collapse:collapse;width:100%;min-width:760px;font-size:.85rem;line-height:1.65}
+.sb-table th{background:var(--ink);color:var(--cream);text-align:left;padding:10px 14px;white-space:nowrap;font-weight:700}
+.sb-table td{padding:10px 14px;border-top:1.5px solid rgba(51,41,63,.18);vertical-align:top;color:var(--ink-soft)}
+.sb-table tbody tr:nth-child(even){background:rgba(255,197,61,.08)}
+.sb-table td:first-child{white-space:nowrap;font-family:"Baloo 2",sans-serif;font-weight:700;color:var(--coral)}
+.st-note{margin-top:14px;font-size:.88rem;color:var(--ink-soft);background:var(--bg2);border-radius:12px;padding:10px 16px}
+.st-imgs{margin-top:18px;display:flex;justify-content:center;gap:18px;flex-wrap:wrap}
+.st-imgs figure{margin:0;max-width:420px;flex:1 1 280px}
+.st-imgs img{width:100%;border:2px solid var(--ink);border-radius:14px;box-shadow:5px 5px 0 rgba(51,41,63,.85);background:#fff;cursor:zoom-in;transition:.2s}
+.st-imgs img:hover{transform:translateY(-4px)}
+.st-imgs figcaption{text-align:center;font-size:.8rem;color:var(--ink-soft);margin-top:8px;letter-spacing:.08em}
+.mini-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:44px}
+.phone{border:2px solid var(--ink);border-radius:18px;overflow:hidden;box-shadow:5px 5px 0 rgba(51,41,63,.85);background:#fff;transition:.2s;cursor:zoom-in}
+.phone:hover{transform:translateY(-6px) rotate(-1deg)}
+.phone img{aspect-ratio:9/18.6;object-fit:cover;width:100%}
+.mindmap{margin-top:44px;border:2px solid var(--ink);border-radius:var(--radius);box-shadow:8px 8px 0 rgba(51,41,63,.85);overflow:hidden}
+
+/* ---------- Gallery ---------- */
+.gallery-band{background:var(--ink);color:var(--cream)}
+.gallery-band .sec-head .kicker{color:var(--yellow)}
+.gallery-band .sec-head p{color:#CBBFD8}
+.gal-label{display:inline-flex;align-items:center;gap:10px;font-family:"ZCOOL KuaiLe",cursive;font-size:1.3rem;margin:34px 0 18px}
+.gal-label .bar{width:34px;height:6px;border-radius:4px}
+.gal-photos{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.gal-item{border-radius:22px;overflow:hidden;border:2px solid rgba(255,253,248,.9);box-shadow:0 12px 30px rgba(0,0,0,.35);cursor:zoom-in;position:relative}
+.gal-item img{width:100%;height:100%;object-fit:cover;transition:transform .45s ease}
+.gal-item:hover img{transform:scale(1.06)}
+.gal-item .cap{position:absolute;left:0;right:0;bottom:0;padding:26px 16px 12px;font-size:.85rem;background:linear-gradient(transparent,rgba(20,14,26,.85));color:#fff}
+.gal-item.tall{aspect-ratio:3/4}
+.gal-item.wide{aspect-ratio:16/10}
+.gal-posters{display:grid;grid-template-columns:repeat(6,1fr);gap:18px}
+.gal-posters .gal-item{aspect-ratio:1/1.4}
+.gal-posters .span3{grid-column:span 3;aspect-ratio:16/9}
+.gal-posters .span2{grid-column:span 2}
+
+/* ---------- Footer ---------- */
+footer{background:var(--coral);color:#fff;text-align:center;padding:90px 6vw 40px;position:relative;overflow:hidden}
+footer::before{content:"";position:absolute;top:-2px;left:0;right:0;height:36px;background:radial-gradient(circle at 24px -12px,transparent 26px,var(--ink) 27px) repeat-x;background-size:48px 36px;transform:rotate(180deg)}
+footer h2{font-family:"ZCOOL KuaiLe","Baloo 2",cursive;font-size:clamp(2.4rem,6vw,4rem);text-shadow:3px 3px 0 rgba(51,41,63,.9)}
+footer .en{font-family:"Baloo 2",sans-serif;letter-spacing:.3em;font-weight:600;margin:10px 0 26px}
+footer .contact{display:inline-flex;flex-direction:column;gap:10px;background:var(--cream);color:var(--ink);border:2px solid var(--ink);border-radius:24px;padding:26px 42px;box-shadow:6px 6px 0 rgba(51,41,63,.9);transform:rotate(-1deg)}
+footer .contact a{font-weight:700;font-size:1.05rem;transition:.2s}
+footer .contact a:hover{color:var(--coral)}
+footer .credit{margin-top:48px;font-size:.82rem;opacity:.85;letter-spacing:.1em}
+
+/* ---------- Lightbox ---------- */
+.lightbox{position:fixed;inset:0;background:rgba(24,17,32,.92);z-index:200;display:none;align-items:center;justify-content:center;padding:4vh 4vw;cursor:zoom-out}
+.lightbox.open{display:flex}
+.lightbox img{max-width:92vw;max-height:90vh;border-radius:18px;border:3px solid var(--cream);box-shadow:0 24px 80px rgba(0,0,0,.6)}
+.lightbox .close{position:absolute;top:22px;right:30px;font-size:2rem;color:#fff;cursor:pointer;font-family:"Baloo 2",sans-serif}
+
+/* top btn */
+#toTop{position:fixed;right:22px;bottom:22px;z-index:90;width:52px;height:52px;border-radius:50%;background:var(--yellow);border:2px solid var(--ink);box-shadow:4px 4px 0 rgba(51,41,63,.9);font-size:1.3rem;cursor:pointer;opacity:0;pointer-events:none;transition:.3s}
+#toTop.show{opacity:1;pointer-events:auto}
+#toTop:hover{transform:translateY(-4px)}
+
+/* ---------- Responsive ---------- */
+@media(max-width:960px){
+  .hero-grid,.about-grid,.work{grid-template-columns:1fr;gap:56px}
+  .work.flip .media{order:0}
+  .skill-cols{grid-template-columns:1fr}
+  .mini-grid{grid-template-columns:repeat(2,1fr)}
+  .gal-photos{grid-template-columns:1fr 1fr}
+  .gal-posters{grid-template-columns:repeat(2,1fr)}
+  .gal-posters .span3,.gal-posters .span2{grid-column:span 1}
+  .gal-posters .gal-item{aspect-ratio:1/1.4}
+  .sticker.s2{display:none}
+  .blob.b3{display:none}
+  .hero{padding-top:120px}
+}
+@media(max-width:560px){
+  .gal-photos{grid-template-columns:1fr}
+  .mini-grid{grid-template-columns:repeat(2,1fr)}
+  .mini-grid .phone:nth-child(n+3){display:none}
+  section{padding:70px 5vw}
+}
+</style>
+<script>
+// 标记 JS 可用（reveal 动画仅在此时启用，脚本被拦截时内容保持可见）
+document.documentElement.classList.add('js');
+</script>
+</head>
+<body>
+
+<!-- ================= NAV ================= -->
+<nav>
+  <span class="logo">张微 · Portfolio</span>
+  <a class="item" href="#about">关于</a>
+  <a class="item" href="#skills">技能</a>
+  <a class="item" href="#works">作品</a>
+  <a class="item" href="#gallery">视觉</a>
+  <a class="item" href="#contact">联系</a>
+</nav>
+
+<!-- ================= HERO ================= -->
+<header class="hero">
+  <div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
+  <div class="hero-grid">
+    <div>
+      <span class="hero-tag"><span class="dot"></span>正在寻找有趣的合作机会</span>
+      <h1 class="name">你好，我是张微<span class="en">WEI ZHANG · PERSONAL PORTFOLIO</span></h1>
+      <p class="hero-sub">一名<b>大学生</b>，经济学主修、计算机辅修。<br>会画画的美工，也是能写代码的策划——从<b>游戏角色立绘</b>、<b>小程序 UI</b> 到<b>广告分镜</b>，我喜欢把脑洞一路做到落地。</p>
+      <div class="hero-cta">
+        <a class="btn primary" href="#works">🎨 看看我的作品</a>
+        <a class="btn ghost" href="#contact">和我聊聊 →</a>
+      </div>
+    </div>
+    <div class="hero-art">
+      <div class="hero-card">
+        <span class="badge">TapTap 9.2 分 🏆</span>
+        <img src="assets/hero-illustration.png" alt="游戏角色立绘 — 勇者斗魔王">
+        <div class="cap">CHARACTER DESIGN · 手绘角色立绘</div>
+        <div class="sticker s1"><img src="assets/q-trio.jpg" alt="Q版角色设计"></div>
+        <div class="sticker s2"><img src="assets/pixel-girl.gif" alt="像素小人动图"></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ================= MARQUEE ================= -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>广告脚本策划 <b class="hl">✦</b> 游戏美术 <b class="hl">✦</b> 角色设计 <b class="hl">✦</b> UI 设计 <b class="hl">✦</b> 摄影 <b class="hl">✦</b> 平面海报 <b class="hl">✦</b> 游戏制作 <b class="hl">✦</b> 翻译 <b class="hl">✦</b> 绘画 <b class="hl">✦</b></span>
+    <span>广告脚本策划 <b class="hl">✦</b> 游戏美术 <b class="hl">✦</b> 角色设计 <b class="hl">✦</b> UI 设计 <b class="hl">✦</b> 摄影 <b class="hl">✦</b> 平面海报 <b class="hl">✦</b> 游戏制作 <b class="hl">✦</b> 翻译 <b class="hl">✦</b> 绘画 <b class="hl">✦</b></span>
+  </div>
+</div>
+
+<!-- ================= ABOUT ================= -->
+<section id="about">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="kicker">Basic Information</div>
+      <h2 class="underline">关于我</h2>
+      <p>经济学思维 × 编程能力 × 优秀审美，一个复合型的创意人</p>
+    </div>
+    <div class="about-grid">
+      <div class="about-card reveal">
+        <h3>👋 自我介绍</h3>
+        <p>我来自<b>广东药科大学经济学专业</b>，辅修计算机科学与技术。既有商业与数据思维，也具备把想法动手实现的编程能力。</p>
+        <p>美术方面有丰富的<b>商业交接经验</b>，长期活跃于米画师、画加等约稿平台；同时掌握<b>绘画、摄影、游戏制作、翻译</b>等多项技能。</p>
+        <p>日语 N2 水平，曾与<b>万粉国外 B 站 UP 主</b>长期合作，负责视频翻译与跨国沟通。</p>
+        <div class="info-chips">
+          <span class="chip">🎓 广东药科大学</span>
+          <span class="chip">✍️ 广告脚本策划</span>
+          <span class="chip">💻 计算机辅修</span>
+          <span class="chip">🇯🇵 日语 N2</span>
+        </div>
+      </div>
+      <div class="adv-grid">
+        <div class="adv reveal">
+          <div class="ico">🧠</div>
+          <div><h4>双学科思维</h4><p>经济学与计算机双修，既懂商业逻辑与数据分析，又有扎实的编程落地能力。</p></div>
+        </div>
+        <div class="adv reveal">
+          <div class="ico">🎨</div>
+          <div><h4>商业美术经验</h4><p>优秀审美 + 丰富的商业交接经验，长期在米画师、画加等平台承接委托。</p></div>
+        </div>
+        <div class="adv reveal">
+          <div class="ico">🌏</div>
+          <div><h4>跨国协作能力</h4><p>日语 N2，与万粉国外 B 站 UP 主长期合作，独立完成视频翻译与跨文化交流。</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SKILLS ================= -->
+<section class="skills-band" id="skills">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="kicker">Skill Set</div>
+      <h2 class="underline">技能工具箱</h2>
+      <p>创意、设计与开发，一条龙搞定</p>
+    </div>
+    <div class="skill-cols">
+      <div class="skill-box reveal">
+        <div class="ico">🖌️</div>
+        <h4>设计与影像</h4>
+        <div class="tags"><span>Photoshop</span><span>After Effects</span><span>Premiere Pro</span><span>剪映专业版</span><span>绘画 / 立绘</span><span>摄影</span></div>
+      </div>
+      <div class="skill-box reveal">
+        <div class="ico">📊</div>
+        <h4>数据与办公</h4>
+        <div class="tags"><span>Excel</span><span>PowerPoint</span><span>Word</span><span>SPSS</span><span>EViews 10</span><span>draw.io</span></div>
+      </div>
+      <div class="skill-box reveal">
+        <div class="ico">⌨️</div>
+        <h4>开发与工具</h4>
+        <div class="tags"><span>Python / PyCharm</span><span>Visual C++</span><span>IntelliJ IDEA</span><span>游戏引擎制作</span><span>微信小程序</span><span>网页制作</span></div>
+      </div>
+    </div>
+    <p class="skill-note reveal">✨ 另有日语 N2 — 可承担翻译、字幕与海外沟通工作</p>
+  </div>
+</section>
+
+<!-- ================= TIMELINE ================= -->
+<section id="experience">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="kicker">Experience</div>
+      <h2 class="underline">经历轨迹</h2>
+    </div>
+    <div class="timeline">
+      <div class="tl-item reveal">
+        <div class="time">2026.06 — 2026.09</div>
+        <h4>深圳市三百斤科技有限公司 · 美工</h4>
+        <p>负责辅助公司视觉物料与美术产出，完成商业项目的设计交接与落地。</p>
+      </div>
+      <div class="tl-item reveal">
+        <div class="time">在校期间</div>
+        <h4>广东药科大学 · 经济学专业</h4>
+        <p>经济学主修 + 计算机科学与技术辅修，兼顾商业思维与技术实践。</p>
+      </div>
+      <div class="tl-item reveal">
+        <div class="time">持续进行中</div>
+        <h4>自由创作 · 平台约稿 · 跨国翻译合作</h4>
+        <p>米画师 / 画加平台商业约稿；与万粉国外 B 站 UP 主长期合作视频翻译。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= WORKS ================= -->
+<section id="works" style="padding-top:40px">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="kicker">Selected Works</div>
+      <h2 class="underline">精选作品</h2>
+      <p>从广告策划到独立游戏，每一个都亲手打造</p>
+    </div>
+
+    <!-- 01 广告策划 -->
+    <div class="work reveal">
+      <div class="media">
+        <img class="main-shot" src="assets/storyboard.png" alt="洛克王国游戏广告分镜">
+      </div>
+      <div>
+        <div class="num">01</div>
+        <span class="en">Advertising Planning</span>
+        <h3>洛克王国游戏广告 · 分镜与剧情构思</h3>
+        <div class="pill-row"><span class="pill c1">广告策划</span><span class="pill c2">分镜脚本</span><span class="pill c3">剧情构思</span></div>
+        <p class="desc">为洛克王国游戏广告进行<b>分镜绘制与剧情设计</b>，用直接绘制的方式把创意想法具象化——从「由远到近的突兀感」开场，到送蛋洛克的反转笑点，完整搭建了广告的情绪节奏。</p>
+        <a class="link-btn" href="https://pan.baidu.com/s/1oul8ouOgCuml2FUpAZp4" target="_blank" rel="noopener">▶ 查看成品视频（百度网盘）</a>
+      </div>
+    </div>
+
+    <!-- 02 广告脚本 -->
+    <div class="work full reveal">
+      <div>
+        <div class="num">02</div>
+        <span class="en">Ad Script Writing</span>
+        <h3>《方块奇兵》抖音广告 · 双版本脚本策划</h3>
+        <div class="pill-row"><span class="pill c1">脚本策划</span><span class="pill c2">分镜设计</span><span class="pill c3">口播文案</span><span class="pill c4">BGM 节奏设计</span></div>
+        <p class="desc">为肉鸽塔防游戏《方块奇兵》撰写抖音竖屏信息流广告脚本，输出<b>真人版（38秒）与动画版（30秒）</b>两套完整方案：真人版以「倒霉蛋 vs 天选之子」前后反差喜剧制造爽感，动画版采用「低谷→转机→爆发→实证→收尾」五段式情绪曲线。以下为两版完整分镜脚本表。</p>
+      </div>
+      <div class="script-table-card">
+        <div class="st-head"><span class="sc-tag">真人版 · 38秒 · 9:16 竖屏</span><b>《方块奇兵》抖音竖屏创意广告脚本（真人版）</b></div>
+        <div class="st-scroll">
+          <table class="sb-table">
+            <thead><tr><th>时间</th><th>画面</th><th>字幕 / 台词</th><th>音效 / BGM</th></tr></thead>
+            <tbody>
+              <tr><td>0-3秒</td><td>宿舍/工位场景，“我”瘫在椅子上打游戏，屏幕上是连败结算；朋友路过被游戏音效吸引，凑过来看（真人演绎）</td><td>朋友：哟，这游戏看着挺上头啊？　我：肉鸽塔防，看好了，这波我天胡开局！</td><td>游戏失败音效垫底，轻松BGM起</td></tr>
+              <tr><td>3-6秒</td><td>屏幕切游戏实机画面（右上角标注“实机演示”），进入肉鸽三选一，弹出三个普通技能</td><td>我：怎么又是普通技能啊……</td><td>抽卡音效，失望下滑音</td></tr>
+              <tr><td>6-9秒</td><td>（实机）点击大转盘，指针缓缓停在“扣除生命值15%”</td><td>我：可恶，居然扣我生命值！</td><td>转盘转动声，失败音效</td></tr>
+              <tr><td>9-12秒</td><td>（实机）投入金币触发地底毒气事件，友军集体掉血6%</td><td>我：今天怎么这么背啊！</td><td>毒气音效，BGM转低沉</td></tr>
+              <tr><td>12-15秒</td><td>（实机）第四波怪潮淹没基地，失败结算弹出“连败×3”</td><td>我：（不甘心）我就不信了，再来一局！</td><td>基地爆炸声，失败音效加重</td></tr>
+              <tr><td>15-17秒</td><td>我赌气把手机往桌上一放，朋友顺手拿起来，坐下点开新一局（真人演绎）</td><td>朋友：别急，让我来试试。</td><td>转场音效，BGM切换轻快</td></tr>
+              <tr><td>17-20秒</td><td>（实机）朋友随手一点，三选一金光炸开，三个传说技能跃然屏上（金色UI特效）</td><td>我：我去！传说技能？！</td><td>金色特效音，抽卡高光音效</td></tr>
+              <tr><td>20-23秒</td><td>（实机）再点触发战歌石碑，友军攻击力+25%，全屏战意特效</td><td>字幕：战歌石碑 友军攻击力+25%</td><td>号角声，战鼓声</td></tr>
+              <tr><td>23-25秒</td><td>（实机）全体生命恢复60%</td><td>字幕：神秘彩虹 全体生命恢复60%</td><td>治愈音效</td></tr>
+              <tr><td>25-28秒</td><td>（实机）连续触发天选传说技能并快速部署兵营，“我”凑近一起指挥选择，主动做出取舍（体现策略）</td><td>我：选这个！</td><td>连续抽卡音效，节奏加快</td></tr>
+              <tr><td>28-31秒</td><td>（实机）入夜开战，兵营与技能联动，敌军成片被清，胜利结算弹出</td><td>字幕（金色）：胜利！</td><td>战斗音效，胜利号角</td></tr>
+              <tr><td>31-34秒</td><td>我跪在地上抱住朋友大腿，夸张反应（真人演绎）</td><td>我：天啊，你也太厉害了吧！以后抽卡就靠你啦！</td><td>喜剧音效，BGM收尾</td></tr>
+              <tr><td>34-38秒</td><td>游戏LOGO弹出，宣传语展示，屏幕下方出现“点击下方 立即下载”按钮动效</td><td>方块奇兵 肉鸽塔防·快来创造只属于你的战场传说；点击下方立即下载！</td><td>重低音收尾“咚”</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="st-note">🎙️ 口播文案：方块奇兵，每一局都是全新战场——运气和策略都在你手里，快来创造属于你的传说！　✂️ 剪辑要点：前15秒节奏稍慢突出挫败感；17秒后按「点击动作→特效爆发→结果字幕」三拍快切；结尾LOGO与下载按钮同屏停留不少于2秒。</div>
+        <div class="st-imgs">
+          <figure>
+            <img src="assets/storyboard-live.png" alt="真人版分镜概览图 — 朋友与主角" loading="lazy">
+            <figcaption>分镜概览 · 平视远景拉近 / 近景（真人版）</figcaption>
+          </figure>
+        </div>
+      </div>
+      <div class="script-table-card">
+        <div class="st-head"><span class="sc-tag alt">动画版 · 30秒 · 9:16 竖屏</span><b>《方块奇兵》抖音竖屏脚本（动画剧情 + 实机展示版）</b></div>
+        <div class="st-scroll">
+          <table class="sb-table">
+            <thead><tr><th>时间</th><th>画面</th><th>字幕 / 台词</th><th>音效 / BGM</th></tr></thead>
+            <tbody>
+              <tr><td>0-1秒</td><td>灰头土脸的冰法，法杖拖地，独自走在草地上，满脸疲惫</td><td>冰法：卡关了……打不动了</td><td>低沉BGM，风声</td></tr>
+              <tr><td>1-3秒</td><td>同样灰头土脸的奥法从旁边窜出来，拍了拍冰法的肩，指向远处的祭坛</td><td>奥法：走，过关送的十连还没抽！</td><td>转场</td></tr>
+              <tr><td>3-5秒</td><td>两人走到召唤祭坛前，手掌按上去，祭坛亮起紫光，二人十分惊讶</td><td>无台词，表情惊讶</td><td>魔法嗡鸣，紫光音效</td></tr>
+              <tr><td>5-7秒</td><td>紫光猛变金光，再爆成刺眼红光，整个屏幕震颤</td><td>冰法（震惊）：难道是……神话英雄？</td><td>音调骤升，重低音震颤</td></tr>
+              <tr><td>7-8秒</td><td>红光中一道身影踏出——火法，紫帽远程，脚下烈焰缠绕，威严满满</td><td>神话英雄·火法 降临！</td><td>火焰爆燃声“轰——”，音乐骤停，只留火焰燃烧声</td></tr>
+              <tr><td>8-9秒</td><td>冰法眼睛一亮，一扫颓废，兴奋地拍火法的肩，指向战场方向。三人面朝远方，阳光照耀</td><td>冰法：走！我们再试一次！</td><td>鼓点重新切入，情绪上扬</td></tr>
+              <tr><td>9-12秒</td><td>（切游戏实机画面）火法进场开大：烈焰陨石从天而降，全屏AOE爆炸，成片小兵被秒杀，伤害数字疯狂跳动</td><td>神话火法，强度直接拉满！</td><td>爆炸声+伤害连击音效，BGM全开</td></tr>
+              <tr><td>12-15秒</td><td>（实机）火法火墙+火雨连招衔接，一路平推推图，关卡进度飞速推进，怪群像割草一样成片倒下</td><td>一路平推，推图像割草！</td><td>连击音效密集，节奏加快</td></tr>
+              <tr><td>15-18秒</td><td>（实机）关卡胜利结算界面，弹出“过关奖励：十连招募券”，指尖点击领取</td><td>过一关，送十连！</td><td>结算“叮”声，金币音效</td></tr>
+              <tr><td>18-22秒</td><td>（实机）英雄招募界面十连抽：金光四射，连续抽出多名神话英雄依次亮相（英雄以游戏内实际上线阵容为准）</td><td>十连直接出神话！</td><td>抽卡音效层层递进，高潮重音</td></tr>
+              <tr><td>22-26秒</td><td>（实机）阵容搭配界面：神话英雄逐个上阵、羁绊点亮战力飙升；新阵容再战，全屏技能清怪，速通碾压</td><td>强力英雄随心搭配，越打越强！</td><td>战斗BGM持续高燃</td></tr>
+              <tr><td>26-30秒</td><td>切回Q版动画：冰法三人组欢呼胜利，镜头上移天空，游戏LOGO弹出，下载按钮闪烁</td><td>方块奇兵 过关十连 越打越强，快来邂逅你的传说英雄！</td><td>重低音收尾“咚”</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="st-note">🎙️ 口播文案：卡关？别着急，过一关送十连，神话火法直接到手！烈焰陨石全屏秒杀，推图像割草一样爽！过一关领十连，强力英雄随心搭配，越打越强！方块奇兵，快来邂逅你的传说英雄！</div>
+        <div class="st-imgs">
+          <figure>
+            <img src="assets/storyboard-anim.png" alt="动画版分镜概览图 — 奥法冰法与召唤祭坛" loading="lazy">
+            <figcaption>分镜概览 · 平视近景（战败搀扶）/ 召唤祭坛远景（动画版）</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+
+    <!-- 03 TapTap 游戏 -->
+    <div class="work reveal">
+      <div class="media">
+        <img class="main-shot" src="assets/taptap-page.jpg" alt="勇者斗魔王 TapTap 页面，评分9.2">
+        <img class="float-shot fs1" src="assets/bug-game-screenshot.jpg" alt="游戏内实机画面">
+      </div>
+      <div>
+        <div class="num">03</div>
+        <span class="en">Game Art · On TapTap</span>
+        <h3>《勇者斗魔王～我们的游戏没有bug！》</h3>
+        <div class="pill-row"><span class="pill c1">角色设计</span><span class="pill c2">创意构思</span><span class="pill c3">手绘立绘</span><span class="pill c4">已上线 TapTap</span></div>
+        <p class="desc">一款已上线 TapTap 的<b>玩家视角 RPG</b>——扮演游戏 QA，在通关传统 RPG 的过程中搜寻 Bug。我负责<b>角色设计与创意构思</b>，完成了勇者、魔王等主要角色的<b>手绘立绘</b>与 Q 版形象设计。</p>
+        <a class="link-btn" href="https://www.taptap.cn" target="_blank" rel="noopener">🏆 TapTap 评分 9.2 · 已正式上线</a>
+      </div>
+    </div>
+
+    <!-- 04 独立游戏 -->
+    <div class="work flip reveal">
+      <div class="media">
+        <img class="main-shot" src="assets/indie-battle.jpg" alt="个人独立游戏战斗画面">
+        <img class="float-shot fs2" src="assets/pixel-room.png" alt="像素风房间场景设定">
+      </div>
+      <div>
+        <div class="num">04</div>
+        <span class="en">Indie Game</span>
+        <h3>个人独立游戏 · 完整创作</h3>
+        <div class="pill-row"><span class="pill c1">游戏策划</span><span class="pill c2">角色设计</span><span class="pill c3">编程实现</span><span class="pill c4">像素美术</span></div>
+        <p class="desc">从零开始的<b>完整游戏创作</b>：独立完成策划案、角色设计（含 Q 版全套角色与像素形象）、场景设定与编程实现。</p>
+      </div>
+    </div>
+
+    <!-- 05 小程序 -->
+    <div class="work reveal">
+      <div class="media">
+        <div class="mini-grid" style="margin-top:0">
+          <div class="phone"><img src="assets/miniapp-home.jpg" alt="小程序首页 UI"></div>
+          <div class="phone"><img src="assets/miniapp-booking.png" alt="入校预约 UI"></div>
+          <div class="phone"><img src="assets/miniapp-shop.jpg" alt="商品发布 UI"></div>
+          <div class="phone"><img src="assets/miniapp-jobs.jpg" alt="招聘信息 UI"></div>
+        </div>
+      </div>
+      <div>
+        <div class="num">05</div>
+        <span class="en">WeChat Mini Program</span>
+        <h3>微信小程序 · UI 与功能流程设计</h3>
+        <div class="pill-row"><span class="pill c1">UI 设计</span><span class="pill c2">功能架构</span><span class="pill c3">流程设计</span></div>
+        <p class="desc">为广东药科大学<b>校友会小程序</b>完成整体 UI 设计，覆盖入校预约、商品发布、招聘信息等多个核心页面；并独立绘制<b>功能流程脑图</b>，梳理平台信息、商品、活动、用户四大系统的完整链路。</p>
+      </div>
+    </div>
+
+    <!-- 06 网页设计 -->
+    <div class="work flip reveal">
+      <div class="media">
+        <img class="main-shot" src="assets/web-hero.png" alt="SOLACE of ORANGE 香水品牌网页首屏">
+        <img class="float-shot fs1" src="assets/web-notes.jpg" alt="香水网页三段香调版块">
+      </div>
+      <div>
+        <div class="num">06</div>
+        <span class="en">Web Design</span>
+        <h3>SOLACE of ORANGE · 香水品牌网页</h3>
+        <div class="pill-row"><span class="pill c1">网页设计</span><span class="pill c2">前端制作</span><span class="pill c3">品牌视觉</span></div>
+        <p class="desc">AI 辅助完成的香水品牌概念网站：从<b>首屏大图排版、三段香调叙事</b>到产品系列与价格页，全站设计 + 前端制作，打造「橙意慰藉，静享时光」的温暖品牌氛围。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= GALLERY ================= -->
+<section class="gallery-band" id="gallery">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="kicker">Visual Works</div>
+      <h2 class="underline">视觉作品</h2>
+      <p>镜头里的世界 & 手里的海报</p>
+    </div>
+
+    <div class="gal-label reveal"><span class="bar" style="background:var(--teal)"></span>摄影 Photography · 2026</div>
+    <div class="gal-photos">
+      <div class="gal-item tall reveal"><img src="assets/photo-lotus.jpg" alt="摄影 — 睡莲" loading="lazy"><div class="cap">莲之双生</div></div>
+      <div class="gal-item tall reveal"><img src="assets/photo-sunset.jpg" alt="摄影 — 粉色晚霞" loading="lazy"><div class="cap">晚霞与高压线</div></div>
+      <div class="gal-item tall reveal"><img src="assets/photo-mantis.jpg" alt="摄影 — 绿叶上的螳螂" loading="lazy"><div class="cap">叶间猎手</div></div>
+    </div>
+
+    <div class="gal-label reveal" style="margin-top:56px"><span class="bar" style="background:var(--pink)"></span>海报与平面设计 Poster Design</div>
+    <div class="gal-posters">
+      <div class="gal-item span3 reveal"><img src="assets/poster-redblack.png" alt="海报 — Red & Black & White 音乐主题" loading="lazy"><div class="cap">RED & BLACK & WHITE · 音乐视觉</div></div>
+      <div class="gal-item span3 reveal"><img src="assets/poster-album.jpg" alt="海报 — Plastic Love 复古专辑封面设计" loading="lazy"><div class="cap">PLASTIC LOVE · 复古专辑海报</div></div>
+      <div class="gal-item span2 reveal"><img src="assets/poster-vocal.jpg" alt="海报 — 日式人物海报" loading="lazy"><div class="cap">アウグストゥス神話 · 人物海报</div></div>
+      <div class="gal-item span2 reveal"><img src="assets/poster-travel.jpg" alt="海报 — 美林湖温泉大酒店暑假旅行计划" loading="lazy"><div class="cap">暑假旅行计划 · 手账风行程海报</div></div>
+      <div class="gal-item span2 reveal"><img src="assets/poster-countryside.jpg" alt="海报 — 青春赴乡土实践三下乡招募" loading="lazy"><div class="cap">三下乡招募 · 长图宣传海报</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer id="contact">
+  <h2>谢谢观看</h2>
+  <div class="en">THANKS FOR WATCHING</div>
+  <div class="contact reveal">
+    <span style="font-weight:900;font-size:.9rem;letter-spacing:.2em;color:var(--coral)">CONTACT ME</span>
+    <a href="mailto:2956654374@qq.com">📮 2956654374@qq.com</a>
+    <span style="font-size:.88rem;color:var(--ink-soft)">广告策划 / 游戏美术 / UI 设计 · 欢迎来聊</span>
+  </div>
+  <div class="credit">© 2026 ZHANG WEI · 个人作品集 · Made with ❤</div>
+</footer>
+
+<div class="lightbox" id="lightbox"><span class="close">✕</span><img src="" alt="预览大图"></div>
+<button id="toTop" title="回到顶部">↑</button>
+
+<script>
+(function () {
+  'use strict';
+  var docEl = document.documentElement;
+  var reveals = Array.prototype.slice.call(document.querySelectorAll('.reveal'));
+
+  /* ---- 滚动显现（带兜底：不支持 IO 时直接全部显示） ---- */
+  function showAll() { reveals.forEach(function (el) { el.classList.add('in'); }); }
+  if ('IntersectionObserver' in window) {
+    try {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+        });
+      }, { threshold: .12, rootMargin: '0px 0px -40px 0px' });
+      reveals.forEach(function (el) { io.observe(el); });
+      /* 3 秒兜底：万一有元素未被触发，强制显示 */
+      setTimeout(showAll, 3000);
+    } catch (err) { docEl.classList.remove('js'); showAll(); }
+  } else {
+    docEl.classList.remove('js');
+  }
+
+  /* ---- 灯箱 ---- */
+  try {
+    var lb = document.getElementById('lightbox'), lbImg = lb.querySelector('img');
+    document.querySelectorAll('.gal-item img, .phone img, .main-shot, .float-shot, .st-imgs img').forEach(function (img) {
+      img.addEventListener('click', function () { lbImg.src = img.src; lb.classList.add('open'); });
+    });
+    lb.addEventListener('click', function () { lb.classList.remove('open'); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') lb.classList.remove('open'); });
+  } catch (err) { /* 灯箱不可用时忽略 */ }
+
+  /* ---- 回到顶部 ---- */
+  try {
+    var toTopBtn = document.getElementById('toTop');
+    window.addEventListener('scroll', function () {
+      toTopBtn.classList.toggle('show', window.scrollY > 600);
+    }, { passive: true });
+    toTopBtn.addEventListener('click', function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  } catch (err) { /* 忽略 */ }
+})();
+</script>
+</body>
+</html>
